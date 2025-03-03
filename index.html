@@ -19,6 +19,19 @@
         input, textarea { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; }
         button { background-color: #0073e6; color: white; padding: 12px 15px; border: none; cursor: pointer; font-size: 18px; width: 100%; border-radius: 5px; }
         footer { text-align: center; padding: 15px; background: #0073e6; color: white; margin-top: 30px; font-size: 16px; }
+        .timeline { position: relative; max-width: 800px; margin: 40px auto; }
+        .timeline::after { content: ''; position: absolute; width: 6px; background-color: #0073e6; top: 0; bottom: 0; left: 50%; margin-left: -3px; }
+        .timeline-box { padding: 20px; background: white; position: relative; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); width: 40%; }
+        .left { left: 0; }
+        .right { left: 50%; }
+        @media (max-width: 768px) {
+            section { width: 90%; }
+            .timeline-box { width: 80%; left: 10% !important; text-align: center; }
+            .gallery img { max-width: 100%; }
+            .question { font-size: 16px; }
+            .answer { font-size: 16px; }
+            button { font-size: 16px; }
+        }
     </style>
     <script>
         function toggleAnswer(id) {
@@ -31,40 +44,28 @@
     <header>הסיפור שלי - התמודדות עם פגיעת ראש</header>
     
     <section>
-        <h2>רקע אישי</h2>
-        <p>לפני שש שנים עברתי תאונת דרכים ששינתה את חיי. ההתמודדות עם הפגיעה והשיקום היו מאתגרים, אך גם מלאי למידה וצמיחה.</p>
+        <h2>מהי פגיעת ראש וכיצד היא משפיעה?</h2>
+        <p>פגיעת ראש יכולה להשפיע על היכולות הקוגניטיביות, הפיזיות והרגשיות של אדם. היא יכולה לגרום לשינויים בזיכרון, קשיים בניהול משימות, עייפות מנטלית, ועוד. השיקום דורש זמן וסבלנות, והוא כולל טיפול פיזי, קוגניטיבי ורגשי.</p>
     </section>
     
     <section>
-        <h2>ההרצאה הקרובה שלי</h2>
-        <p>אני מתרגש לשתף שאהיה מרצה בשיעור טיפול קוגניטיבי ב-29/5/25 בקריה האקדמית אונו. בהרצאה אדבר על:</p>
+        <h2>המסע האישי שלי בשיקום</h2>
+        <p>בשנים הראשונות לאחר הפציעה, נאלצתי להתמודד עם קשיים בזיכרון, עייפות קוגניטיבית ואתגרים בתקשורת. התהליך כלל:</p>
         <ul>
-            <li>החוויה האישית שלי בהתמודדות עם פגיעת ראש והשפעתה על חיי.</li>
-            <li>מה עזר לי להשתקם, כולל כתיבה, עבודה במכירות ושימוש בטכנולוגיה.</li>
-            <li>איך AI יכול לעזור לאנשים עם פגיעת ראש, כולל כלים וטכניקות לניהול עומס קוגניטיבי.</li>
-            <li>רעיונות נוספים על קשיים קוגניטיביים ואסטרטגיות התמודדות.</li>
+            <li>עבודה עם מומחי שיקום על שיפור הזיכרון והריכוז.</li>
+            <li>שימוש בטכנולוגיות כמו AI לניהול מידע ומשימות.</li>
+            <li>למידה מחודשת של תקשורת אפקטיבית באמצעות עבודה במכירות.</li>
+            <li>תכנון שגרה יומית המותאמת לרמות האנרגיה המשתנות שלי.</li>
         </ul>
-        <p>הסטודנטיות יוכלו לשלוח שאלות מראש, ואני מתכנן לשלב דוגמאות מהחיים האישיים שלי כדי להמחיש את האתגרים והפתרונות האפשריים.</p>
-    </section>
-    
-    <section>
-        <h2>גלריית תמונות</h2>
-        <div class="gallery">
-            <img src="image1.jpg" alt="תהליך השיקום">
-            <img src="image2.jpg" alt="התמודדות עם הפציעה">
-        </div>
     </section>
     
     <section class="interactive">
         <h2>שאלות נפוצות</h2>
-        <p class="question" onclick="toggleAnswer('q1')">מה היה האתגר הכי גדול שלך אחרי הפציעה?</p>
-        <p class="answer" id="q1">האתגר הכי גדול היה לשקם את יכולת הזיכרון והתקשורת שלי, ולמצוא דרכים להתנהל בחיי היום-יום בצורה אפקטיבית.</p>
+        <p class="question" onclick="toggleAnswer('q1')">מה היו האתגרים הכי גדולים שלך?</p>
+        <p class="answer" id="q1">שיקום הזיכרון ויכולת הביטוי, ניהול עומס קוגניטיבי, והחזרת הביטחון העצמי במצבים חברתיים.</p>
         
-        <p class="question" onclick="toggleAnswer('q2')">איך עבודה במכירות עזרה לך?</p>
-        <p class="answer" id="q2">היא הכריחה אותי להיות בקשר עם אנשים, לשפר את הביטוי שלי ולפתח ביטחון עצמי.</p>
-        
-        <p class="question" onclick="toggleAnswer('q3')">איך AI עוזר לך היום?</p>
-        <p class="answer" id="q3">אני משתמש בכלים כמו ChatGPT לניסוח טקסטים, תזכורות חכמות לניהול משימות, וכלים לניהול סדר יום.</p>
+        <p class="question" onclick="toggleAnswer('q2')">איך שימוש בטכנולוגיה עזר לך?</p>
+        <p class="answer" id="q2">כלים כמו ChatGPT, אפליקציות תזכורות וניהול זמן עזרו לי להתמודד עם קשיים יומיומיים.</p>
     </section>
     
     <section class="contact-form">
