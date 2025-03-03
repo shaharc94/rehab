@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הסיפור שלי - התמודדות עם פגיעת ראש</title>
+    <style>
+        body { font-family: 'Heebo', sans-serif; direction: rtl; text-align: right; margin: 0; background-color: #f4f4f9; }
+        header { background-color: #0073e6; color: white; padding: 20px; text-align: center; font-size: 28px; font-weight: bold; }
+        section { margin: 40px auto; width: 80%; background: white; padding: 20px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); }
+        h2 { color: #0073e6; }
+        p { line-height: 1.8; font-size: 18px; }
+        .interactive { background-color: #eef6ff; padding: 20px; border-radius: 10px; }
+        .question { font-weight: bold; cursor: pointer; padding: 10px; background: #0073e6; color: white; border-radius: 5px; margin-bottom: 5px; display: block; }
+        .answer { display: none; padding: 10px; background: #ffffff; border: 1px solid #0073e6; border-radius: 5px; margin-bottom: 10px; }
+        .gallery { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .gallery img { width: 100%; max-width: 300px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); }
+        .contact-form { background-color: #eef6ff; padding: 20px; border-radius: 10px; }
+        input, textarea { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; }
+        button { background-color: #0073e6; color: white; padding: 12px 15px; border: none; cursor: pointer; font-size: 18px; width: 100%; border-radius: 5px; }
+        footer { text-align: center; padding: 15px; background: #0073e6; color: white; margin-top: 30px; font-size: 16px; }
+    </style>
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>הסיפור שלי - התמודדות עם פגיעת ראש</header>
+    
+    <section>
+        <h2>רקע אישי</h2>
+        <p>לפני שש שנים עברתי תאונת דרכים ששינתה את חיי. ההתמודדות עם הפגיעה והשיקום היו מאתגרים, אך גם מלאי למידה וצמיחה.</p>
+    </section>
+    
+    <section>
+        <h2>ההרצאה הקרובה שלי</h2>
+        <p>אני מתרגש לשתף שאהיה מרצה בשיעור טיפול קוגניטיבי ב-29/5/25 בקריה האקדמית אונו. בהרצאה אדבר על:</p>
+        <ul>
+            <li>החוויה האישית שלי בהתמודדות עם פגיעת ראש והשפעתה על חיי.</li>
+            <li>מה עזר לי להשתקם, כולל כתיבה, עבודה במכירות ושימוש בטכנולוגיה.</li>
+            <li>איך AI יכול לעזור לאנשים עם פגיעת ראש, כולל כלים וטכניקות לניהול עומס קוגניטיבי.</li>
+            <li>רעיונות נוספים על קשיים קוגניטיביים ואסטרטגיות התמודדות.</li>
+        </ul>
+        <p>הסטודנטיות יוכלו לשלוח שאלות מראש, ואני מתכנן לשלב דוגמאות מהחיים האישיים שלי כדי להמחיש את האתגרים והפתרונות האפשריים.</p>
+    </section>
+    
+    <section>
+        <h2>גלריית תמונות</h2>
+        <div class="gallery">
+            <img src="image1.jpg" alt="תהליך השיקום">
+            <img src="image2.jpg" alt="התמודדות עם הפציעה">
+        </div>
+    </section>
+    
+    <section class="interactive">
+        <h2>שאלות נפוצות</h2>
+        <p class="question" onclick="toggleAnswer('q1')">מה היה האתגר הכי גדול שלך אחרי הפציעה?</p>
+        <p class="answer" id="q1">האתגר הכי גדול היה לשקם את יכולת הזיכרון והתקשורת שלי, ולמצוא דרכים להתנהל בחיי היום-יום בצורה אפקטיבית.</p>
+        
+        <p class="question" onclick="toggleAnswer('q2')">איך עבודה במכירות עזרה לך?</p>
+        <p class="answer" id="q2">היא הכריחה אותי להיות בקשר עם אנשים, לשפר את הביטוי שלי ולפתח ביטחון עצמי.</p>
+        
+        <p class="question" onclick="toggleAnswer('q3')">איך AI עוזר לך היום?</p>
+        <p class="answer" id="q3">אני משתמש בכלים כמו ChatGPT לניסוח טקסטים, תזכורות חכמות לניהול משימות, וכלים לניהול סדר יום.</p>
+    </section>
+    
+    <section class="contact-form">
+        <h2>צור קשר</h2>
+        <form>
+            <label for="name">שם:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">אימייל:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">הודעה:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">שלח</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>© 2025 כל הזכויות שמורות | נכתב על ידי שחר כהן</p>
+    </footer>
+</body>
+</html>
